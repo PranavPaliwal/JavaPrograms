@@ -1,2 +1,2 @@
 # JavaPrograms
-this repo contains all my java learning practice codes.
+This repo contains all my java learning practice codes.
