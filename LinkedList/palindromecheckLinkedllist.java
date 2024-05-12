@@ -1,6 +1,6 @@
 //Java code to check that a Linked List is a palindrome or not!!!!
 
-public class Linkedllist {
+public class palindromecheckLinkedllist {
     public static class Node{
         int data;
         Node next;

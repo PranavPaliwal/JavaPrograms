@@ -12,7 +12,7 @@ The constructor public Node(int data) initializes a new node
  with the given data and sets the next reference to null.
   */
 
-public class LinkedList {
+public class InitializingLinkedList {
 
     public static class Node{
 
@@ -48,7 +48,7 @@ public class LinkedList {
         head=newNode;
     }
 
-    public void add_last(){
+    public void add_last(int data){
 
         Node newNode=new Node(data);
 
@@ -77,7 +77,7 @@ public class LinkedList {
 
     public static void main(String[] args) {
 
-    LinkedList ll = new LinkedList();
+    InitializingLinkedList ll = new InitializingLinkedList();
 
     ll.add_first(2);
     ll.add_first(1);
