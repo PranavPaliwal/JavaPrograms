@@ -64,7 +64,8 @@ return -1;
         else
         System.out.println("element is at index"+result);
         
+        scan.close();
+
     }
-    
 }
 
