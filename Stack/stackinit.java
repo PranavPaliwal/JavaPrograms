@@ -31,7 +31,7 @@ public class stackinit {
 
         s.push(3);
         s.push(2);
-        s.push(1);
+        s.push(1);    
 
         while(!s.isEmpty()){
             System.out.println(stack.peek());
