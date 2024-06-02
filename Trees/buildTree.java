@@ -1,5 +1,8 @@
 import java.util.*;
 public class buildTree {
+
+// Define a Node class to represent each node in the binary tree.
+
     static class Node{
         int data;
         Node left;
@@ -11,8 +14,12 @@ public class buildTree {
             this.right=null;
         }
     }
+// Define a binaryTree class to build and manage the binary tree.
 
     static class binrayTree{
+        
+// Initialize an index variable to keep track of the current position in the array
+
         static int idx=-1;
         public static Node buildtree(int nodes[]){
             idx++;
