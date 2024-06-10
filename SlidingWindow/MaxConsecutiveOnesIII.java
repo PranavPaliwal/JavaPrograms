@@ -19,7 +19,8 @@ public class MaxConsecutiveOnesIII {
         int k = 2;
         System.out.println(maxConsecutiveone(nums, k));
     }
-    static int maxConsecutiveone(int nums[], int k){
+    
+    public static int maxConsecutiveone(int nums[], int k){
         int left = 0, right = 0, max = 0, zeros=0;
         int n=nums.length;
 
@@ -27,15 +28,18 @@ public class MaxConsecutiveOnesIII {
 
             if(nums[right]==0)zeros++;
 
-            while(zeros>k){
+            if(zeros>k){
                 if(nums[left]==0){
                     zeros--;
                 }
                 left++;
         }
+        if(zeros<=k){
         int len=right-left+1;
         max=Math.max(max,len);
+            }
         right++;
+        
         }
         return max;
     }
