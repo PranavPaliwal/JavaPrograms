@@ -34,7 +34,10 @@ public class bubblesort {
     }
     public static void main(String[] args) {
        int arr[]={ 5 , 4, 1, 3 , 2,9, 8 , 7 };
+       System.out.println("Before sorting : ");
+        print(arr);
         bubblesortt(arr);
+        System.out.println("After sorting : ");
         print(arr);
         
         
