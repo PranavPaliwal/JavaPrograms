@@ -1,68 +1,71 @@
-public class reverseLinkedList {
+class reverseLinkedList{
 
-    class Node{
+    static class Node{
+
         int data;
         Node next;
+
         public Node(int data){
             this.data=data;
             this.next=null;
         }
     }
-    static Node head;
 
-    void add(int data){
-        Node newNode =new Node(data);
+
+    public static Node head;
+    public static Node tail;
+    public static int size;
+
+
+    public static void addNode(int val){
         if(head==null){
-            head=newNode;
-            return;
+            head=new Node(val);
+            tail=head;
+            size++;
         }
-        newNode.next=head;
-        head=newNode;
+        else{
+            Node newNode=new Node(val);
+            tail.next=newNode;
+            tail=newNode;
+            size++;
+        }
     }
 
+    public static Node reverseList(Node head){
+        Node curr=head;
+        Node temp=null;
 
-   static Node reverse(Node head){
-
-    Node temp=null;
-    Node curr=head;
-
-    while(curr!=null){
-        Node next=curr.next;
-        curr.next=temp;
-        temp=curr;
-        curr=next;
+        while(curr!=null){
+            Node next=curr.next;
+            curr.next=temp;
+            temp=curr;
+            curr=next;
         }
         return temp;
     }
 
-     void print(Node head){
-        if(head==null) return;
-
-        Node temp=head;
-
-        while (temp!=null) {
-            System.out.print(temp.data);
-            System.out.print("->");
-            temp=temp.next;
-            if(temp==null){
-                System.out.println("null");
-            }
+    public static void printll(Node head){
+        Node curr=head;
+        while(curr!=null){
+            System.out.print(curr.data+" -> ");
+            curr=curr.next;
         }
+        System.out.println("null");
     }
-
 
     public static void main(String[] args) {
 
-        reverseLinkedList ll=new reverseLinkedList();
+        reverseLinkedList list=new reverseLinkedList();
 
-        ll.add(7);
-        ll.add(5);
-        ll.add(3);
-        ll.add(1);
+        list.addNode(1);
+        list.addNode(2);
+        list.addNode(3);
+        System.out.println(" before reverse");
+        printll(head);
+        System.out.println();
+        System.out.println(" after reverse");
+        head=reverseList(head);
+        printll(head);
 
-
-        ll.print(head);
-        
     }
-    
 }
