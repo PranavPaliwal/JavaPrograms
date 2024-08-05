@@ -10,6 +10,7 @@ public class pushBottom {
             return;
         }
         int top=s.pop();
+        // using recursion here
         pushB(s, data);
         s.push(top);
     }
