@@ -15,7 +15,7 @@ public class fibonnaci {
     public static void main(String[] args) {
         Scanner scan=new Scanner(System.in);
 
-        System.out.println("Enter any no: ");
+        System.out.println("Enter no: ");
         int n=scan.nextInt();
 
         System.out.println(fib(n));
