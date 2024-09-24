@@ -20,6 +20,7 @@ public class kadensAlgo {
                     start=i+1;
                 }
             }
+            System.out.println("Maximum sum: " +max);
             System.out.println("Start : "+start+" end : "+end);
         }
     
